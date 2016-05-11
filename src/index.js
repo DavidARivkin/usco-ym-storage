@@ -2,11 +2,10 @@ import Rx from 'rx'
 const Observable = Rx.Observable
 const { merge, just } = Observable
 
-import { combineLatestObj } from '../../utils/obsUtils'
-import { exists } from '../../utils/utils'
-import { changesFromObservableArrays } from '../../utils/diffPatchUtils'
+import { combineLatestObj } from 'utils/obsUtils'
+import { exists } from 'utils/utils'
+import { changesFromObservableArrays } from 'utils/diffPatchUtils'
 
-import assign from 'fast.js/object/assign' // faster object.assign
 import {equals} from 'ramda'
 
 import {makeApiStream, spreadRequests} from './helpers'
