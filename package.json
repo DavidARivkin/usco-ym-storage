@@ -11,7 +11,8 @@
     "composite-detect": "0.0.3",
     "fast.js": "^0.1.1",
     "ramda": "^0.21.0",
-    "rx": "^4.0.7"
+    "rx": "^4.0.7",
+    "usco-utils": "github:usco/usco-utils"
   },
   "devDependencies": {
     "assert": "^1.3.0",

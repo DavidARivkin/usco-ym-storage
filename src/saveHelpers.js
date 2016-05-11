@@ -1,7 +1,7 @@
 import { pick } from 'ramda'
 import { jsonToFormData } from './utils/httpUtils'
-import { mergeData } from 'utils/modelUtils'
-import { remapJson } from 'utils/utils'
+import { mergeData } from 'usco-utils/modelUtils'
+import { remapJson } from 'usco-utils/utils'
 
 import assign from 'fast.js/object/assign' // faster object.assign
 

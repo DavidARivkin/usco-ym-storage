@@ -2,9 +2,9 @@ import Rx from 'rx'
 const Observable = Rx.Observable
 const { merge, just } = Observable
 
-import { combineLatestObj } from 'utils/obsUtils'
-import { exists } from 'utils/utils'
-import { changesFromObservableArrays } from 'utils/diffPatchUtils'
+import { combineLatestObj } from 'usco-utils/obsUtils'
+import { exists } from 'usco-utils/utils'
+import { changesFromObservableArrays } from 'usco-utils/diffPatchUtils'
 
 import {equals} from 'ramda'
 
