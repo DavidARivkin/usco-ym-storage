@@ -6,7 +6,7 @@ import {contains} from 'ramda'
 
 import makeYMDriver from './index'
 
-test.cb('renderer cli pipeline (stl available)', t => {
+test.cb('should handle data saving', t => {
   const saveData = {
     apiEndpoint: 'https://api.youmagine.com/v1',
     design: {id: 1, synched: true},
