@@ -27,6 +27,9 @@ export function jsonToFormData (jsonData) {
       // console.log("value",value)
       value = `{ ${value.join(',')} }`
     }
+    if(typeof value === 'boolean') {
+      value = `'${value}'`
+    }
 
     // console.log("append",fieldName, value)
     formData.append(fieldName, value)
