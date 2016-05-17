@@ -51,7 +51,7 @@ export function toBom (method = 'put', data) {
   const designUri = `${apiEndpoint}/designs/${designId}`
   const bomUri = `${designUri}/bom`
 
-  const fieldNames = ['qty', 'phys_qty', 'unit', 'part_uuid', 'part_parameters', 'part_version']
+  const fieldNames = ['qty', 'phys_qty', 'unit', 'part_uuid', 'part_parameters', 'part_version', 'printable']
   const mapping = {
     'id': 'part_uuid',
     'params': 'part_parameters',
