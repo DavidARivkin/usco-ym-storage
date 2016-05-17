@@ -6,7 +6,7 @@
     "type": "git",
     "url": "http://github.com/usco/usco-ym-storage.git"
   },
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "dependencies": {
     "composite-detect": "0.0.3",
     "fast.js": "^0.1.1",
