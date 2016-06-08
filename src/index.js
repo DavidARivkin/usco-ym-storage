@@ -36,7 +36,7 @@ export default function makeYMDriver (httpDriver, params = {}) {
       .map(({design, authData, apiEndpoint}) => ({designId: design.id, authToken: authData.token, apiEndpoint}))
       .map(function (data) {
         const {designId, authToken, apiEndpoint} = data
-        const authTokenStr = `/?auth_token=${authToken}`
+        const authTokenStr = authToken ? `/?auth_token=${authToken}` : ''
         const designUri = `${apiEndpoint}/designs/${designId}${authTokenStr}`
         return {
           url: designUri,

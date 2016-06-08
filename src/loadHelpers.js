@@ -19,7 +19,7 @@ export function makeApiStreamGets (source$, outputMapper, design$, authData$, ap
 export function getBom (data) {
   const {designId, authToken, apiEndpoint} = data
 
-  const authTokenStr = `/?auth_token=${authToken}`
+  const authTokenStr = authToken ? `/?auth_token=${authToken}` : ''
   const designUri = `${apiEndpoint}/designs/${designId}`
   const bomUri = `${designUri}/bom${authTokenStr}`
 
@@ -35,9 +35,11 @@ export function getBom (data) {
 export function getParts (data) {
   const {designId, authToken, apiEndpoint} = data
 
-  const authTokenStr = `/?auth_token=${authToken}`
+  const authTokenStr = authToken ? `/?auth_token=${authToken}` : ''
   const designUri = `${apiEndpoint}/designs/${designId}`
   const partUri = `${designUri}/parts${authTokenStr}`
+
+
 
   return {
     url: partUri,
@@ -51,7 +53,7 @@ export function getParts (data) {
 export function getAssemblies (data) { // FIXME: semi hack
   const {designId, authToken, apiEndpoint} = data
 
-  const authTokenStr = `/?auth_token=${authToken}`
+  const authTokenStr = authToken ? `/?auth_token=${authToken}` : ''
   const designUri = `${apiEndpoint}/designs/${designId}`
   const assembliesUri = `${designUri}/assemblies${authTokenStr}`
 
@@ -78,7 +80,7 @@ export function getAssemblyEntries (data) {
   //FIXME : UGH pre filter this
   if(sourceData && sourceData.uuid){
 
-    const authTokenStr = `/?auth_token=${authToken}`
+    const authTokenStr = authToken ? `/?auth_token=${authToken}` : ''
     const designUri = `${apiEndpoint}/designs/${designId}`
     const assembliesUri = `${designUri}/assemblies/${sourceData.uuid}/entries${authTokenStr}`
 

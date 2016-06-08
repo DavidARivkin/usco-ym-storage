@@ -10,7 +10,7 @@ export function toParts (method = 'put', data) {
   const {designId, authToken, apiEndpoint} = data
   const entries = data._entries || []
 
-  const authTokenStr = `/?auth_token=${authToken}`
+  const authTokenStr = authToken ? `/?auth_token=${authToken}` : ''
   const designUri = `${apiEndpoint}/designs/${designId}`
   const partUri = `${designUri}/parts`
 
@@ -47,7 +47,7 @@ export function toBom (method = 'put', data) {
   const {designId, authToken, apiEndpoint} = data
   const entries = data._entries || []
 
-  const authTokenStr = `/?auth_token=${authToken}`
+  const authTokenStr = authToken ? `/?auth_token=${authToken}` : ''
   const designUri = `${apiEndpoint}/designs/${designId}`
   const bomUri = `${designUri}/bom`
 
@@ -82,7 +82,7 @@ export function toAssemblies (method = 'put', data) {
   const {designId, authToken, apiEndpoint} = data
   const entries = data._entries || []
 
-  const authTokenStr = `/?auth_token=${authToken}`
+  const authTokenStr = authToken ? `/?auth_token=${authToken}` : ''
   const designUri = `${apiEndpoint}/designs/${designId}`
 
   const fieldNames = ['uuid', 'name', 'color', 'pos', 'rot', 'sca', 'part_uuid']
