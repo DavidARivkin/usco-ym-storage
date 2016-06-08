@@ -23,7 +23,7 @@
   },
   "scripts": {
     "mocha": "mocha lib",
-    "test": "ava src/**/*.spec.js",
+    "test": "ava src/**/*.spec.js --verbose",
     "build": "babel -d lib src/",
     "release": "npm run release-patch",
     "release-patch": "git checkout master && npm run build; git commit -a -m 'chore(dist): built release/'; npm version patch && git push origin master --tags ",
