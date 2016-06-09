@@ -28,7 +28,8 @@ export function getBom (data) {
     method: 'get',
     type: 'ymLoad',
     typeDetail: 'bom',
-    responseType: 'json'
+    responseType: 'json',
+    withCredentials: true
   }
 }
 
@@ -46,7 +47,8 @@ export function getParts (data) {
     method: 'get',
     type: 'ymLoad',
     typeDetail: 'parts',
-    responseType: 'json'
+    responseType: 'json',
+    withCredentials: true
   }
 }
 
@@ -69,7 +71,8 @@ export function getAssemblies (data) { // FIXME: semi hack
     method: 'get',
     type: 'ymLoad',
     typeDetail: 'assemblies',
-    responseType: 'json'
+    responseType: 'json',
+    withCredentials: true
   }
 
 }
@@ -90,6 +93,7 @@ export function getAssemblyEntries (data) {
       type: 'ymLoad',
       typeDetail: 'assemblyEntries',
       responseType: 'json',
+      withCredentials: true,
       assemblyId: sourceData.uuid// FIXME : temporary, used to know WHICH assembly the further data belongs to
     }
   }else{

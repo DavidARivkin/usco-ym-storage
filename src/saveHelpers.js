@@ -36,7 +36,8 @@ export function toParts (method = 'put', data) {
         type: 'ymSave',
         typeDetail: 'parts',
         mimeType: null, // 'application/json'
-        responseType: 'json'
+        responseType: 'json',
+        withCredentials: true
       }
     })
   return requests
@@ -71,7 +72,8 @@ export function toBom (method = 'put', data) {
       type: 'ymSave',
       typeDetail: 'bom',
       mimeType: null, // 'application/json'
-      responseType: 'json'
+      responseType: 'json',
+      withCredentials: true
     }
   })
   return requests
@@ -100,7 +102,8 @@ export function toAssemblies (method = 'put', data) {
       method,
       send,
       type: 'ymSave',
-      typeDetail: 'assemblies'
+      typeDetail: 'assemblies',
+      withCredentials: true
     }
   })
   return requests
