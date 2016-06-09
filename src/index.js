@@ -42,7 +42,8 @@ export default function makeYMDriver (httpDriver, params = {}) {
           url: designUri,
           method: 'get',
           type: 'ymLoad',
-          typeDetail: 'designExists'
+          typeDetail: 'designExists',
+          withCredentials: true
         }
       })
 
